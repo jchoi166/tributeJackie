@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    }
+
+html {
+    font-size: 62.5%; /*Default font size is 16 px. We set font size to 62.5% because we want our default size to be 10px for the rem measurements we specified below. REM is a unit based on default font size which makes responsive design much easier, as we only need to change the font size to scale everything larger or smaller. */
+    /* height: 100%;
+    width: 100%; */
+
+}
+
+body {
+    /* height: 100%; */
+    width: 100%;
+    /* position: absolute; */
+}
+
+.header {
+    background-image: url(https://mui.today/__export/1582943787348/sites/mui/img/2020/02/28/jackie-chan.jpg_617962631.jpg);
+    background-size: cover;
+    height: 95vh;
+    width: 100%;
+    z-index: -1;
+    padding: 3rem;
+    background-attachment: fixed;
+    /* position: fixed; */
+}
+
+.nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    line-height: 4rem;
+    padding-left: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+}
+
+.hamburger {
+    transform: translateY(-13px);
+    padding-right: 2rem;
+}
+.page-descriptions {
+    font-size: 4rem;
+    margin-top: 95vh;
+}
+
+.slideshow {
+
+}

@@ -1,0 +1,23 @@
+{
+  "name": "tributeJackie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jchoi166/tributeJackie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jchoi166/tributeJackie/issues"
+  },
+  "homepage": "https://github.com/jchoi166/tributeJackie#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
