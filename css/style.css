@@ -8,24 +8,13 @@ html {
     font-size: 62.5%; /*Default font size is 16 px. We set font size to 62.5% because we want our default size to be 10px for the rem measurements we specified below. REM is a unit based on default font size which makes responsive design much easier, as we only need to change the font size to scale everything larger or smaller. */
     /* height: 100%;
     width: 100%; */
-
 }
 
 body {
     /* height: 100%; */
     width: 100%;
     /* position: absolute; */
-}
-
-.header {
-    background-image: url(https://mui.today/__export/1582943787348/sites/mui/img/2020/02/28/jackie-chan.jpg_617962631.jpg);
-    background-size: cover;
-    height: 95vh;
-    width: 100%;
-    z-index: -1;
-    padding: 3rem;
-    background-attachment: fixed;
-    /* position: fixed; */
+    
 }
 
 .nav {
@@ -35,6 +24,8 @@ body {
     align-items: center;
     position: fixed;
     width: 100%;
+    padding: 3rem;
+    z-index: 5;
 }
 
 .logo {
@@ -48,11 +39,52 @@ body {
     transform: translateY(-13px);
     padding-right: 2rem;
 }
-.page-descriptions {
-    font-size: 4rem;
-    margin-top: 95vh;
+
+.test {
+    position: absolute;
+    /* z-index: 0; */
+}
+.header {
+    background-image: url(https://mui.today/__export/1582943787348/sites/mui/img/2020/02/28/jackie-chan.jpg_617962631.jpg);
+    background-size: cover;
+    height: 85vh;
+    width: 100%;
+    z-index: -200;
+    top: -9rem;
+    /* background-attachment: fixed; */
+    position: fixed;
+    padding: 3rem;
 }
 
-.slideshow {
+/* .slideshow {
+    padding-left: 3rem;
+    position: relative;
+    color: white;
+    top: 35%;
+    width: 60%;
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 5rem;
+} */
 
+.message {
+    padding-left: 2rem;
+    position: relative;
+    color: white;
+    top: 35%;
+    max-width: 50rem;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 5rem;
+}
+.message p {
+    font-size: 1.4rem;
+}
+
+.page-descriptions {
+    font-size: 4rem;
+    z-index: 500;
+    background: white;
+    /* position: relative; */
+    margin-top: 75vh;
 }
