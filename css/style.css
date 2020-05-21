@@ -1,52 +1,54 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-    }
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0; }
 
 html {
-    font-size: 62.5%; /*Default font size is 16 px. We set font size to 62.5% because we want our default size to be 10px for the rem measurements we specified below. REM is a unit based on default font size which makes responsive design much easier, as we only need to change the font size to scale everything larger or smaller. */
-    height: 100%;
-    width: 100%;
-}
+  font-size: 62.5%;
+  /*Default font size is 16 px. We set font size to 62.5% because we want our default size to be 10px for the rem measurements we specified below. REM is a unit based on default font size which makes responsive design much easier, as we only need to change the font size to scale everything larger or smaller. */
+  height: 100%;
+  width: 100%; }
 
 body {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    
-}
+  height: 100%;
+  width: 100%;
+  position: absolute; }
 
 .nav {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    padding: 3rem;
-    z-index: 5;
-}
-
-.logo {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 3rem;
+  z-index: 5; }
+  .nav .logo {
     line-height: 4rem;
     padding-left: 2rem;
     font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-}
-
-.hamburger {
+    font-size: 4rem; }
+  .nav .hamburger {
     transform: translateY(-13px);
-    padding-right: 2rem;
-}
+    padding-right: 2rem; }
+
+button {
+  width: 115px;
+  margin-top: 4rem; }
+
+.m-info {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.3rem;
+  margin: 2rem 0; }
+  .m-info p {
+    font-size: 3rem;
+    line-height: 4rem;
+    color: #6e6e6e; }
 
 .test {
-    /* position: absolute; */
-    /* display:flex; */
-    z-index: -2;
-    width: 100%
-}
-.header {
+  z-index: -2;
+  width: 100%; }
+  .test .header {
     background-image: url(https://mui.today/__export/1582943787348/sites/mui/img/2020/02/28/jackie-chan.jpg_617962631.jpg);
     background-size: cover;
     height: 100vh;
@@ -54,72 +56,71 @@ body {
     top: -9rem;
     position: fixed;
     padding: 3rem;
-    z-index: -2;
-    /* display:flex; */
-}
-
-.header::after{
-    content: '';
-    clear: both;
-    display: table;
-}
-.message {
-    padding-left: 2rem;
-    position: relative;
-    color: white;
-    top: 35%;
-    max-width: 50rem;
-    font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 5rem;
-}
-.message p {
-    font-size: 1.4rem;
-}
-
-.page-description {
+    z-index: -2; }
+    .test .header .message {
+      padding-left: 2rem;
+      position: relative;
+      color: white;
+      top: 35%;
+      max-width: 50rem;
+      font-size: 2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 5rem; }
+      .test .header .message p {
+        font-size: 1.4rem; }
+  .test .movieList {
     display: flex;
     margin-top: 75vh;
     justify-content: center;
-    background: white;
-}
-.inner {
-    font-size: 4rem;
-    /* z-index: 500; */
-    padding: 3rem;
-    max-width: 1440px;
-}
+    background: white; }
+    .test .movieList .inner {
+      font-size: 4rem;
+      padding: 3rem;
+      max-width: 1200px; }
+      .test .movieList .inner .biography {
+        display: flex;
+        flex-direction: column; }
+        .test .movieList .inner .biography p {
+          margin-top: 4rem;
+          max-width: 80rem;
+          align-self: flex-end; }
+      .test .movieList .inner .movie {
+        margin-top: 10rem;
+        margin-left: 12rem; }
+        .test .movieList .inner .movie .imageContainer {
+          display: flex;
+          justify-content: space-between; }
+          .test .movieList .inner .movie .imageContainer .pictures {
+            width: 43%; }
+          .test .movieList .inner .movie .imageContainer .adjusted {
+            height: 75%;
+            position: relative;
+            right: 3rem; }
+          .test .movieList .inner .movie .imageContainer .rushHour {
+            box-shadow: 2rem 3rem #ff4f75;
+            position: relative;
+            top: 16rem; }
+          .test .movieList .inner .movie .imageContainer .drunkenMaster {
+            box-shadow: 2rem 5rem #148270;
+            width: 50%;
+            position: relative;
+            bottom: 9rem; }
+        .test .movieList .inner .movie .caption {
+          margin-top: 7rem; }
+          .test .movieList .inner .movie .caption h1 {
+            margin: 3rem 0; }
+          .test .movieList .inner .movie .caption p {
+            line-height: 4rem;
+            max-width: 45rem; }
 
-.biography {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.3rem;
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
-}
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 6px; } }
 
-.biography p {
-    margin: 4rem 0 3rem 0;
-    font-size: 3rem;
-    max-width: 740px;
-    line-height: 4rem;
-    align-self: flex-end;
-}
-
-.biography button {
-    width: 15%;
-}
-
-@media screen and (max-width: 800px){
-    html{
-        font-size: 6px;
-    }
-}
-@media screen and (min-width: 1000px){
-    .biography {
-        align-items: flex-end;
-    }
+@media screen and (min-width: 1100px) {
+  .biography {
+    align-items: flex-end; }
     .biography p {
-        text-align: right;
-    }
-}
+      text-align: right; }
+  .movie {
+    margin-left: 2rem !important; } }
