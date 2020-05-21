@@ -53,7 +53,7 @@ button {
     background-size: cover;
     height: 100vh;
     width: 100%;
-    top: -9rem;
+    top: -17rem;
     position: fixed;
     padding: 3rem;
     z-index: -2; }
@@ -112,6 +112,30 @@ button {
           .test .movieList .inner .movie .caption p {
             line-height: 4rem;
             max-width: 45rem; }
+  .test .footer {
+    display: flex;
+    background-color: white;
+    padding: 0 10rem;
+    margin: 0; }
+    .test .footer .foot {
+      border-top: 1.5px solid black;
+      flex: 1;
+      font-size: 1.8rem;
+      padding-bottom: 4rem;
+      position: relative; }
+      .test .footer .foot h1 {
+        margin: 3rem 0; }
+      .test .footer .foot P {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 3.4rem; }
+    .test .footer .watermark {
+      position: absolute;
+      bottom: 4rem;
+      right: 0;
+      font-size: 1.5rem;
+      text-align: right;
+      min-width: 277px; }
 
 @media screen and (max-width: 800px) {
   html {
