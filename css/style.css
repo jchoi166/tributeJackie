@@ -32,9 +32,27 @@ body {
     transform: translateY(-13px);
     padding-right: 2rem; }
 
-button {
-  width: 115px;
-  margin-top: 4rem; }
+a {
+  width: fit-content;
+  display: inline-block;
+  margin-top: 3rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #fd6b6a;
+  padding: 1rem 0 .5rem 0;
+  position: relative;
+  cursor: pointer; }
+  a::after {
+    content: " ";
+    height: 2px;
+    width: 100%;
+    background-color: #fd6b6a;
+    display: block;
+    position: absolute;
+    top: 0;
+    transition: top .4s; }
+  a:hover::after {
+    top: 100%; }
 
 .m-info {
   font-family: Arial, Helvetica, sans-serif;
@@ -53,7 +71,7 @@ button {
     background-size: cover;
     height: 100vh;
     width: 100%;
-    top: -9rem;
+    top: -7rem;
     position: fixed;
     padding: 3rem;
     z-index: -2; }
@@ -70,12 +88,13 @@ button {
         font-size: 1.4rem; }
   .test .movieList {
     display: flex;
-    margin-top: 75vh;
+    margin-top: 80vh;
     justify-content: center;
-    background: white; }
+    background: white;
+    padding: 0 10rem; }
     .test .movieList .inner {
       font-size: 4rem;
-      padding: 3rem;
+      padding: 3rem 0;
       max-width: 1200px; }
       .test .movieList .inner .biography {
         display: flex;
@@ -86,7 +105,7 @@ button {
           align-self: flex-end; }
       .test .movieList .inner .movie {
         margin-top: 10rem;
-        margin-left: 12rem; }
+        position: relative; }
         .test .movieList .inner .movie .imageContainer {
           display: flex;
           justify-content: space-between; }
@@ -100,27 +119,83 @@ button {
             box-shadow: 2rem 3rem #ff4f75;
             position: relative;
             top: 16rem; }
-          .test .movieList .inner .movie .imageContainer .drunkenMaster {
+          .test .movieList .inner .movie .imageContainer .drunkenPhoto {
             box-shadow: 2rem 5rem #148270;
             width: 50%;
             position: relative;
-            bottom: 9rem; }
+            bottom: 12rem; }
         .test .movieList .inner .movie .caption {
-          margin-top: 7rem; }
+          margin-top: 7rem;
+          width: fit-content; }
           .test .movieList .inner .movie .caption h1 {
             margin: 3rem 0; }
           .test .movieList .inner .movie .caption p {
             line-height: 4rem;
             max-width: 45rem; }
+  .test .footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 0 10rem;
+    margin: 0; }
+    .test .footer .divider {
+      border-top: 2px solid black;
+      flex-basis: 100%; }
+    .test .footer .foot {
+      flex: 1;
+      font-size: 1.8rem;
+      padding-bottom: 4rem;
+      position: relative; }
+      .test .footer .foot h1 {
+        margin: 3rem 0; }
+      .test .footer .foot P {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 3.4rem; }
+    .test .footer .watermark {
+      position: absolute;
+      bottom: 4rem;
+      right: 0;
+      font-size: 1.5rem;
+      text-align: right;
+      min-width: 277px; }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
+  body .test .movieList .inner .movie .imageContainer {
+    display: flex;
+    flex-direction: column; }
+    body .test .movieList .inner .movie .imageContainer .pictures {
+      width: 100%;
+      margin-top: 2rem; }
+    body .test .movieList .inner .movie .imageContainer .rushHour {
+      box-shadow: none;
+      position: static; }
+    body .test .movieList .inner .movie .imageContainer .drunkenPhoto {
+      box-shadow: none;
+      position: static;
+      bottom: 12rem; }
+  body .test .footer {
+    display: block; }
+    body .test .footer .foot {
+      text-align: center;
+      padding: 0; }
+    body .test .footer .watermark {
+      position: static;
+      text-align: center;
+      padding: 4rem; } }
+
+@media screen and (max-width: 850px) {
   html {
-    font-size: 6px; } }
+    font-size: 7px; } }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1200px) {
   .biography {
     align-items: flex-end; }
     .biography p {
       text-align: right; }
-  .movie {
-    margin-left: 2rem !important; } }
+  .drunkenCaption {
+    position: absolute;
+    right: 0;
+    bottom: 4rem; }
+  body .test .footer {
+    padding-top: 4rem; } }
