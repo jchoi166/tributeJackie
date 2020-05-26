@@ -22,15 +22,43 @@ body {
   position: fixed;
   width: 100%;
   padding: 3rem;
-  z-index: 5; }
+  z-index: 5;
+  transition: .5s; }
   .nav .logo {
     line-height: 4rem;
     padding-left: 2rem;
     font-family: 'Playfair Display', serif;
-    font-size: 4rem; }
+    font-size: 4rem;
+    width: 100px; }
   .nav .hamburger {
     transform: translateY(-13px);
     padding-right: 2rem; }
+
+.nav--scrolled {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  z-index: 5;
+  background-color: white;
+  border-bottom: 1px solid black;
+  animation-name: slidein;
+  animation-duration: .5s; }
+  .nav--scrolled .logo {
+    line-height: 4rem;
+    padding-left: 2rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; }
+  .nav--scrolled .hamburger {
+    padding-right: 2rem; }
+
+@keyframes slidein {
+  from {
+    transform: translateY(-100%); }
+  to {
+    transform: translateY(0%); } }
 
 a {
   width: fit-content;
