@@ -14,6 +14,11 @@ body {
   width: 100%;
   position: absolute; }
 
+.siteWrapper {
+  position: absolute;
+  width: 100%;
+  overflow-x: hidden; }
+
 .nav, .nav--scrolled {
   color: white;
   display: flex;
@@ -81,8 +86,7 @@ a {
     color: #6e6e6e; }
 
 .test {
-  z-index: -2;
-  width: 100%; }
+  z-index: -2; }
   .test .header {
     background-image: url(https://mui.today/__export/1582943787348/sites/mui/img/2020/02/28/jackie-chan.jpg_617962631.jpg);
     background-size: cover;
@@ -90,7 +94,6 @@ a {
     width: 100%;
     top: -7rem;
     position: fixed;
-    padding: 3rem;
     z-index: -2; }
     .test .header .message {
       padding-left: 2rem;
@@ -108,7 +111,8 @@ a {
     margin-top: 80vh;
     justify-content: center;
     background: white;
-    padding: 0 10rem; }
+    padding: 0 10rem;
+    width: 100%; }
     .test .movieList .inner {
       font-size: 4rem;
       padding: 3rem 0;
