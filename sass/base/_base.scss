@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    }
+
+html {
+    font-size: 62.5%; /*Default font size is 16 px. We set font size to 62.5% because we want our default size to be 10px for the rem measurements we specified below. REM is a unit based on default font size which makes responsive design much easier, as we only need to change the font size to scale everything larger or smaller. */
+    height: 100%;
+    width: 100%;
+    // position: absolute;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    // overflow-x: hidden;
+}
+
+.content {
+    display: flex;
+    margin-top: 80vh;
+    justify-content: center;
+    background: white;
+    padding: 0 10rem;
+    width: 100%;
+    
+    &__wrapper {
+        padding: 3rem 0;
+        max-width: 1200px;
+        font-size: 4rem;
+    }
+
+}
+
+.page-wrapper {
+    z-index: -2;
+}

@@ -1,48 +1,8 @@
-
-
-* {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-    }
-
-html {
-    font-size: 62.5%; /*Default font size is 16 px. We set font size to 62.5% because we want our default size to be 10px for the rem measurements we specified below. REM is a unit based on default font size which makes responsive design much easier, as we only need to change the font size to scale everything larger or smaller. */
-    height: 100%;
-    width: 100%;
-}
-
-body {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    
-}
-
-.nav {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    padding: 3rem;
-    z-index: 5;
-
-    .logo {
-        line-height: 4rem;
-        padding-left: 2rem;
-        font-family: 'Playfair Display', serif;
-        font-size: 4rem;
-    }
-
-    .hamburger {
-        transform: translateY(-13px);
-        padding-right: 2rem;
-    }
-}
-
-// Resuable Code
+@import "./base/base";
+@import "./components/movie-card";
+@import "./layout/nav";
+@import "./layout/footer";
+@import "./layout/header";
 
 a {
     width: fit-content;
@@ -54,7 +14,6 @@ a {
     padding: 1rem 0 .5rem 0;
     position: relative;
     cursor: pointer;
-    // border-top: .2rem solid #fd6b6a;
     
     &::after {
         content: " ";
@@ -76,161 +35,29 @@ a {
 .m-info {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2.3rem;
-    margin: 2rem 0;
-    // display: flex;
-    // flex-direction: column;
+    // margin: 2rem 0;
+
 
     p {
         font-size: 3rem;
         line-height: 4rem;
         color: #6e6e6e;
-        // margin: 4rem 0 3rem 0;
-        // max-width: 800px;
-        // align-self: flex-end;
     }
 
 }
 
-//
 
+.biography {
+    display: flex;
+    flex-direction: column;
 
-.test {
-    z-index: -2;
-    width: 100%;
-
-    .header {
-        background-image: url(https://mui.today/__export/1582943787348/sites/mui/img/2020/02/28/jackie-chan.jpg_617962631.jpg);
-        background-size: cover;
-        height: 100vh;
-        width: 100%;
-        top: -7rem;
-        position: fixed;
-        padding: 3rem;
-        z-index: -2;
-    
-        .message {
-            padding-left: 2rem;
-            position: relative;
-            color: white;
-            top: 35%;
-            max-width: 50rem;
-            font-size: 2rem;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 5rem;
-
-            p {
-                font-size: 1.4rem;
-            }
-        }
-    }
-
-    .movieList {
-        display: flex;
-        margin-top: 80vh;
-        justify-content: center;
-        background: white;
-        padding: 0 10rem;
-
-        .inner {
-            font-size: 4rem;
-            padding: 3rem 0;
-            max-width: 1200px;
-            // margin-right: auto;
-            // margin-left: auto;
-            
-
-            .biography {
-                display: flex;
-                flex-direction: column;
-
-                p {
-                    margin-top: 4rem;
-                    max-width: 80rem;
-                    align-self: flex-end;
-                }
-            }
-
-            .movie{
-                margin-top: 10rem;
-                position: relative;
-
-                .imageContainer {
-                    display:flex;
-                    justify-content: space-between;
-
-                    .pictures {
-                        width: 43%;
-                    }
-                    .adjusted {
-                        height: 75%;
-                        position: relative;
-                        right: 3rem;
-                    }
-                    .rushHour {
-                        box-shadow: 2rem 3rem #ff4f75;
-                        position: relative;
-                        top: 16rem;
-                    }
-                    .drunkenPhoto {
-                        box-shadow: 2rem 5rem #148270;
-                        width: 50%;
-                        position: relative; 
-                        bottom: 12rem;
-                    }
-                }
-                
-                .caption {
-                    margin-top: 7rem;
-                    width: fit-content;
-                    h1 {
-                        margin: 3rem 0;
-                    }
-                    p {
-                        line-height: 4rem;
-                        max-width: 45rem;
-                    }
-                }
-            }
-        }
-    }
-
-    .footer {
-        display: flex;
-        flex-wrap: wrap;
-        background-color: white; 
-        padding: 0 10rem;
-        margin: 0;
-        
-        .divider {
-            border-top: 2px solid black;
-            flex-basis: 100%;
-        }
-        .foot {
-            // border-top: 1.5px solid black;
-            flex: 1;
-            font-size: 1.8rem;
-            padding-bottom: 4rem;
-            position: relative;
-
-            h1 {
-                margin: 3rem 0;
-            }
-            P {
-                font-weight: bold;
-                font-size: 2rem;
-                line-height: 3.4rem;
-            }
-        }
-        .watermark {
-            position: absolute; 
-            bottom: 4rem;
-            right: 0;
-            font-size: 1.5rem;
-            text-align: right;
-            min-width: 277px;
-        }
+    p {
+        margin-top: 4rem;
+        max-width: 80rem;
+        align-self: flex-end;
     }
 }
+
 
 @media screen and (max-width: 750px){
    body .test .movieList .inner .movie .imageContainer {
@@ -272,6 +99,14 @@ a {
 @media screen and (max-width: 850px){
     html{
         font-size: 7px;
+    }
+    body .nav {
+        opacity: 0;
+
+        &--scrolled{
+            opacity: 1;
+            transform: translateY(0%);
+        }
     }
 }
 

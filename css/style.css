@@ -14,23 +14,134 @@ body {
   width: 100%;
   position: absolute; }
 
-.nav {
+.content {
+  display: flex;
+  margin-top: 80vh;
+  justify-content: center;
+  background: white;
+  padding: 0 10rem;
+  width: 100%; }
+  .content__wrapper {
+    padding: 3rem 0;
+    max-width: 1200px;
+    font-size: 4rem; }
+
+.page-wrapper {
+  z-index: -2; }
+
+.movie-card {
+  margin-top: 10rem;
+  position: relative; }
+  .movie-card__imageContainer {
+    display: flex;
+    justify-content: space-between; }
+  .movie-card__image {
+    width: 43%; }
+    .movie-card__image--adjusted {
+      height: 75%;
+      position: relative;
+      right: 3rem; }
+  .movie-card .rushHour {
+    box-shadow: 2rem 3rem #ff4f75;
+    position: relative;
+    top: 16rem; }
+  .movie-card .drunkenPhoto {
+    box-shadow: 2rem 5rem #148270;
+    width: 50%;
+    position: relative;
+    bottom: 12rem; }
+  .movie-card__caption {
+    margin-top: 7rem;
+    width: fit-content; }
+    .movie-card__caption h1 {
+      margin: 3rem 0; }
+    .movie-card__caption p {
+      line-height: 4rem;
+      max-width: 45rem; }
+
+.nav, .nav-scrolled {
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
-  padding: 3rem;
-  z-index: 5; }
-  .nav .logo {
-    line-height: 4rem;
-    padding-left: 2rem;
+  padding: 30px;
+  z-index: 5;
+  transition: opacity .3s;
+  opacity: 1; }
+  .nav__logo, .nav-scrolled__logo {
+    line-height: 40px;
+    padding-left: 20px;
     font-family: 'Playfair Display', serif;
-    font-size: 4rem; }
-  .nav .hamburger {
+    font-size: 40px;
+    width: 100px; }
+  .nav__hamburger, .nav-scrolled__hamburger {
     transform: translateY(-13px);
-    padding-right: 2rem; }
+    padding-right: 20px; }
+
+.nav-scrolled {
+  background-color: white;
+  color: black;
+  border-bottom: 1px solid black;
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform .5s, opacity .2s ease-in; }
+  .nav-scrolled__logo {
+    font-size: 30px;
+    width: 400px; }
+  .nav-scrolled__hamburger {
+    transform: translateY(0px);
+    padding-right: 20px; }
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 0 10rem;
+  margin: 0; }
+  .footer__divider {
+    border-top: 2px solid black;
+    flex-basis: 100%; }
+  .footer__foot {
+    flex: 1;
+    font-size: 1.8rem;
+    padding-bottom: 4rem;
+    position: relative; }
+    .footer__foot h1 {
+      margin: 3rem 0; }
+    .footer__foot P {
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 3.4rem; }
+  .footer__watermark {
+    position: absolute;
+    bottom: 4rem;
+    right: 0;
+    font-size: 1.5rem;
+    text-align: right;
+    min-width: 277px; }
+
+.header {
+  background-image: url(https://wallpapercave.com/wp/wp1808874.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  top: -7rem;
+  position: fixed;
+  z-index: -2; }
+  .header__message {
+    padding-left: 2rem;
+    position: relative;
+    color: white;
+    top: 35%;
+    max-width: 50rem;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 5rem; }
+    .header__message p {
+      font-size: 1.4rem; }
 
 a {
   width: fit-content;
@@ -56,109 +167,19 @@ a {
 
 .m-info {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.3rem;
-  margin: 2rem 0; }
+  font-size: 2.3rem; }
   .m-info p {
     font-size: 3rem;
     line-height: 4rem;
     color: #6e6e6e; }
 
-.test {
-  z-index: -2;
-  width: 100%; }
-  .test .header {
-    background-image: url(https://mui.today/__export/1582943787348/sites/mui/img/2020/02/28/jackie-chan.jpg_617962631.jpg);
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    top: -7rem;
-    position: fixed;
-    padding: 3rem;
-    z-index: -2; }
-    .test .header .message {
-      padding-left: 2rem;
-      position: relative;
-      color: white;
-      top: 35%;
-      max-width: 50rem;
-      font-size: 2rem;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 5rem; }
-      .test .header .message p {
-        font-size: 1.4rem; }
-  .test .movieList {
-    display: flex;
-    margin-top: 80vh;
-    justify-content: center;
-    background: white;
-    padding: 0 10rem; }
-    .test .movieList .inner {
-      font-size: 4rem;
-      padding: 3rem 0;
-      max-width: 1200px; }
-      .test .movieList .inner .biography {
-        display: flex;
-        flex-direction: column; }
-        .test .movieList .inner .biography p {
-          margin-top: 4rem;
-          max-width: 80rem;
-          align-self: flex-end; }
-      .test .movieList .inner .movie {
-        margin-top: 10rem;
-        position: relative; }
-        .test .movieList .inner .movie .imageContainer {
-          display: flex;
-          justify-content: space-between; }
-          .test .movieList .inner .movie .imageContainer .pictures {
-            width: 43%; }
-          .test .movieList .inner .movie .imageContainer .adjusted {
-            height: 75%;
-            position: relative;
-            right: 3rem; }
-          .test .movieList .inner .movie .imageContainer .rushHour {
-            box-shadow: 2rem 3rem #ff4f75;
-            position: relative;
-            top: 16rem; }
-          .test .movieList .inner .movie .imageContainer .drunkenPhoto {
-            box-shadow: 2rem 5rem #148270;
-            width: 50%;
-            position: relative;
-            bottom: 12rem; }
-        .test .movieList .inner .movie .caption {
-          margin-top: 7rem;
-          width: fit-content; }
-          .test .movieList .inner .movie .caption h1 {
-            margin: 3rem 0; }
-          .test .movieList .inner .movie .caption p {
-            line-height: 4rem;
-            max-width: 45rem; }
-  .test .footer {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: white;
-    padding: 0 10rem;
-    margin: 0; }
-    .test .footer .divider {
-      border-top: 2px solid black;
-      flex-basis: 100%; }
-    .test .footer .foot {
-      flex: 1;
-      font-size: 1.8rem;
-      padding-bottom: 4rem;
-      position: relative; }
-      .test .footer .foot h1 {
-        margin: 3rem 0; }
-      .test .footer .foot P {
-        font-weight: bold;
-        font-size: 2rem;
-        line-height: 3.4rem; }
-    .test .footer .watermark {
-      position: absolute;
-      bottom: 4rem;
-      right: 0;
-      font-size: 1.5rem;
-      text-align: right;
-      min-width: 277px; }
+.biography {
+  display: flex;
+  flex-direction: column; }
+  .biography p {
+    margin-top: 4rem;
+    max-width: 80rem;
+    align-self: flex-end; }
 
 @media screen and (max-width: 750px) {
   body .test .movieList .inner .movie .imageContainer {
@@ -186,7 +207,12 @@ a {
 
 @media screen and (max-width: 850px) {
   html {
-    font-size: 7px; } }
+    font-size: 7px; }
+  body .nav, body .nav-scrolled {
+    opacity: 0; }
+    body .nav--scrolled {
+      opacity: 1;
+      transform: translateY(0%); } }
 
 @media screen and (min-width: 1200px) {
   .biography {
