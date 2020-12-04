@@ -1,0 +1,35 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white; 
+    padding: 0 10rem;
+    margin: 0;
+    
+    &__divider {
+        border-top: 2px solid black;
+        flex-basis: 100%;
+    }
+    &__foot {
+        flex: 1;
+        font-size: 1.8rem;
+        padding-bottom: 4rem;
+        position: relative;
+
+        h1 {
+            margin: 3rem 0;
+        }
+        P {
+            font-weight: bold;
+            font-size: 2rem;
+            line-height: 3.4rem;
+        }
+    }
+    &__watermark {
+        position: absolute; 
+        bottom: 4rem;
+        right: 0;
+        font-size: 1.5rem;
+        text-align: right;
+        min-width: 277px;
+    }
+}

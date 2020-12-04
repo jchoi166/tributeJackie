@@ -9,75 +9,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="siteWrapper">
+    <!-- <div class="siteWrapper"> -->
     <div class="nav">
-        <h1 class="logo">Jackie Chan</h1>
-        <i class="material-icons hamburger">menu</i>
+        <h1 class="nav__logo">Jackie Chan</h1>
+        <i class="material-icons nav__hamburger">menu</i>
     </div>
-    <div  class="nav--scrolled">
-        <h1 class="logo">Jackie Chan</h1>
-        <i class="material-icons hamburger">menu</i>
+    <div  class="nav-scrolled">
+        <h1 class="nav-scrolled__logo">Jackie Chan</h1>
+        <i class="material-icons nav-scrolled__hamburger">menu</i>
     </div>
     
-    <main class="test">
+    <div class="page-wrapper">
         <div class="header">
-            <div class="message">
+            <div class="header__message">
                 <p>Featured - May 2019</p>
                 <h1>How Jackie Chan's Tireless Charity Activism Made Him Far More Than A Film Star</h1>
             </div>
         </div>
-        <div class="movieList"> 
-            <div class="inner">
-                <section class="biography m-info">
+        <div class="content">
+            <div class="content__wrapper ">
+                <div class="biography m-info">
                     <h1>Biography</h1>
                     <p>Explore the experiences and achievements that made   Jackie an international star. Don't miss the  interactive timeline</p>
-                    <a>Learn More</a>
-                </section>
-                <section class="movie">
-                    <div class="imageContainer">
-                        <img src="/images/rushHourCover.jpg" class="pictures">
-                        <img src="/images/rushHourGun.jpg" class="pictures adjusted rushHour"> 
+                    <a>Learn More</a> 
+                </div>
+                <div class="movie-card">
+                    <div class="movie-card__imageContainer">
+                        <img class="movie-card__image" src="/images/rushHourCover.jpg" >
+                        <img class="movie-card__image movie-card__image--adjusted rushHour" src="/images/rushHourGun.jpg" > 
                     </div>
-                    <div class="caption m-info">
+                    <div class="movie-card__caption m-info">
                         <h1>Rush Hour</h1>
                         <p>One of Jackie's greatests hits in the United States. His chemistry with Chris Tucker and their natural comedic talent created a buddy cop flick that holds a special place in everyone's hearts.</p>
                         <a>Learn More</a>
                     </div>
-                </section>
-                <section class="movie">
-                    <div class="imageContainer">
-                        <img src="/images/drunkenMasterCover.jpg" class="pictures">
-                        <img src="/images/drunkenMasterImage.jpg" class="pictures adjusted drunkenPhoto"> 
+                </div>
+                <div class="movie-card">
+                    <div class="movie-card__imageContainer">
+                        <img class="movie-card__image" src="/images/drunkenMasterCover.jpg" >
+                        <img class="movie-card__image movie-card__image--adjusted drunkenPhoto" src="/images/drunkenMasterImage.jpg" > 
                     </div>
-                    <div class="caption m-info drunkenCaption">
+                    <div class="movie-card__caption drunkenCaption m-info">
                         <h1>Drunken Master</h1>
                         <p>A defining movie for Jackie Chan's career. This was the film that established Jackie's place as cinematic icon and would make him a star across all of Asia.</p>
                         <a>Learn More</a>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
         <div class="footer m-info">
-            <div class="divider"></div>
-            <div class="foot">
+            <div class="footer__divider"></div>
+            <div class="footer__foot">
                 <h1>Support</h1>
                 <p>Privacy</p>
                 <p>Contact</p>
             </div>
-            <div class="foot">
+            <div class="footer__foot">
                 <h1>Follow Us</h1>
                 <p>Instagram</p>
                 <p>Facebook</p>
                 <p>Twitter</p>
             </div>
-            <div class="foot">
-                <div class="watermark">
+            <div class="footer__foot">
+                <div class="footer__watermark">
                     @ 2020 Jackie Chan All Rights Reserved
                 </div>
             </div>
         </div>
-    </main>
     </div>
+    <!-- </div> -->
 <script src="/js/navLogic.js"></script>
 </body>
 </html>
