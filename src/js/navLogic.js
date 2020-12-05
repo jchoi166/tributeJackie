@@ -1,7 +1,7 @@
 console.log('its working')
 
 const nav = document.querySelector(".nav")
-const navScrolled = document.querySelector(".nav-scrolled")
+const navScrolled = document.querySelector(".nav-npm scrolled")
 const sectionOne = document.querySelector(".test")
 
 const sectionOneOptions = {
@@ -10,7 +10,7 @@ const sectionOneOptions = {
     rootMargin: '0px 0px -80% 0px'
 }
 
-const sectionOneObserver = new IntersectionObserver (function(entries, sectionOneObserver) {   
+export const sectionOneObserver = new IntersectionObserver (function(entries, sectionOneObserver) {   
     console.log(entries[0].isIntersecting) 
     if (window.innerWidth <= 850){
         console.log ('returned')
