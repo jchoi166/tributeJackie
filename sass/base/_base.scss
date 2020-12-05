@@ -18,22 +18,7 @@ body {
     // overflow-x: hidden;
 }
 
-.content {
-    display: flex;
-    margin-top: 80vh;
-    justify-content: center;
-    background: white;
-    padding: 0 10rem;
-    width: 100%;
-    
-    &__wrapper {
-        padding: 3rem 0;
-        max-width: 1200px;
-        font-size: 4rem;
-    }
-
-}
-
 .page-wrapper {
     z-index: -2;
 }
+

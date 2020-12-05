@@ -14,20 +14,17 @@ body {
   width: 100%;
   position: absolute; }
 
-.content {
-  display: flex;
-  margin-top: 80vh;
-  justify-content: center;
-  background: white;
-  padding: 0 10rem;
-  width: 100%; }
-  .content__wrapper {
-    padding: 3rem 0;
-    max-width: 1200px;
-    font-size: 4rem; }
-
 .page-wrapper {
   z-index: -2; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.3rem; }
+
+p {
+  font-size: 3rem;
+  line-height: 4rem;
+  color: #6e6e6e; }
 
 .movie-card {
   margin-top: 10rem;
@@ -56,8 +53,31 @@ body {
     .movie-card__caption h1 {
       margin: 3rem 0; }
     .movie-card__caption p {
+      margin-top: 4rem;
       line-height: 4rem;
       max-width: 45rem; }
+
+.button {
+  width: fit-content;
+  display: inline-block;
+  margin-top: 3rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #fd6b6a;
+  padding: 1rem 0 .5rem 0;
+  position: relative;
+  cursor: pointer; }
+  .button::after {
+    content: " ";
+    height: 2px;
+    width: 100%;
+    background-color: #fd6b6a;
+    display: block;
+    position: absolute;
+    top: 0;
+    transition: top .4s; }
+  .button:hover::after {
+    top: 100%; }
 
 .nav, .nav-scrolled {
   color: white;
@@ -143,85 +163,22 @@ body {
     .header__message p {
       font-size: 1.4rem; }
 
-a {
-  width: fit-content;
-  display: inline-block;
-  margin-top: 3rem;
-  font-size: 1.7rem;
-  font-weight: bold;
-  color: #fd6b6a;
-  padding: 1rem 0 .5rem 0;
-  position: relative;
-  cursor: pointer; }
-  a::after {
-    content: " ";
-    height: 2px;
-    width: 100%;
-    background-color: #fd6b6a;
-    display: block;
-    position: absolute;
-    top: 0;
-    transition: top .4s; }
-  a:hover::after {
-    top: 100%; }
-
-.m-info {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.3rem; }
-  .m-info p {
-    font-size: 3rem;
-    line-height: 4rem;
-    color: #6e6e6e; }
-
-.biography {
+.home-content {
   display: flex;
-  flex-direction: column; }
-  .biography p {
-    margin-top: 4rem;
-    max-width: 80rem;
-    align-self: flex-end; }
-
-@media screen and (max-width: 750px) {
-  body .test .movieList .inner .movie .imageContainer {
+  margin-top: 80vh;
+  justify-content: center;
+  background: white;
+  padding: 0 10rem;
+  width: 100%; }
+  .home-content__wrapper {
+    padding: 3rem 0;
+    max-width: 1200px;
+    font-size: 4rem; }
+  .home-content__biography {
     display: flex;
-    flex-direction: column; }
-    body .test .movieList .inner .movie .imageContainer .pictures {
-      width: 100%;
-      margin-top: 2rem; }
-    body .test .movieList .inner .movie .imageContainer .rushHour {
-      box-shadow: none;
-      position: static; }
-    body .test .movieList .inner .movie .imageContainer .drunkenPhoto {
-      box-shadow: none;
-      position: static;
-      bottom: 12rem; }
-  body .test .footer {
-    display: block; }
-    body .test .footer .foot {
-      text-align: center;
-      padding: 0; }
-    body .test .footer .watermark {
-      position: static;
-      text-align: center;
-      padding: 4rem; } }
-
-@media screen and (max-width: 850px) {
-  html {
-    font-size: 7px; }
-  body .nav, body .nav-scrolled {
-    opacity: 0; }
-    body .nav--scrolled {
-      opacity: 1;
-      transform: translateY(0%); } }
-
-@media screen and (min-width: 1200px) {
-  .biography {
-    align-items: flex-end; }
-    .biography p {
-      text-align: right; }
-  .drunkenCaption {
-    position: absolute;
-    right: 0;
-    bottom: 4rem; }
-  body .test .footer {
-    padding-top: 4rem; } }
+    flex-direction: column;
+    padding-top: 3rem; }
+    .home-content__biography p {
+      margin-top: 4rem;
+      max-width: 80rem;
+      align-self: flex-end; }

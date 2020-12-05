@@ -1,130 +1,30 @@
 @import "./base/base";
+@import "./base/typography";
 @import "./components/movie-card";
+@import "./components/button";
 @import "./layout/nav";
 @import "./layout/footer";
 @import "./layout/header";
-
-a {
-    width: fit-content;
-    display: inline-block;
-    margin-top: 3rem;
-    font-size: 1.7rem;
-    font-weight: bold;
-    color:#fd6b6a;
-    padding: 1rem 0 .5rem 0;
-    position: relative;
-    cursor: pointer;
-    
-    &::after {
-        content: " ";
-        height: 2px;
-        width: 100%;
-        background-color: #fd6b6a;
-        display: block;
-        position: absolute;
-        top: 0;
-        transition: top .4s;
-    }
-
-    &:hover::after {
-        top: 100%;
-    }
-}
+@import "./pages/home";
 
 
-.m-info {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.3rem;
-    // margin: 2rem 0;
 
 
-    p {
-        font-size: 3rem;
-        line-height: 4rem;
-        color: #6e6e6e;
-    }
-
-}
+// .m-info {
+//     font-family: Arial, Helvetica, sans-serif;
+//     font-size: 2.3rem;
+//     // margin: 2rem 0;
 
 
-.biography {
-    display: flex;
-    flex-direction: column;
+//     p {
+//         font-size: 3rem;
+//         line-height: 4rem;
+//         color: #6e6e6e;
+//     }
 
-    p {
-        margin-top: 4rem;
-        max-width: 80rem;
-        align-self: flex-end;
-    }
-}
+// }
 
 
-@media screen and (max-width: 750px){
-   body .test .movieList .inner .movie .imageContainer {
-        display: flex;
-        flex-direction: column;
 
-        .pictures {
-            width: 100%;
-            margin-top: 2rem;
-        }
-        .rushHour {
-            box-shadow: none;
-            position: static;
-        }
-        .drunkenPhoto {
-            box-shadow: none;
-            // width: 50%;
-            position: static; 
-            bottom: 12rem;
-        }
-       
-    }
 
-    body .test .footer {
-        display: block;
 
-        .foot{
-            text-align: center;
-            padding: 0; 
-        }
-        .watermark{
-            position: static;
-            text-align: center;
-            padding: 4rem;
-        }
-    }
-}
-
-@media screen and (max-width: 850px){
-    html{
-        font-size: 7px;
-    }
-    body .nav {
-        opacity: 0;
-
-        &--scrolled{
-            opacity: 1;
-            transform: translateY(0%);
-        }
-    }
-}
-
-@media screen and (min-width: 1200px){
-    .biography {
-        align-items: flex-end;
-
-        p {
-            text-align: right;
-        }
-    }
-    .drunkenCaption {
-        position: absolute;
-        right: 0;
-        bottom: 4rem;
-    }
-    body .test .footer {
-        padding-top: 4rem;
-    }
-
-}
