@@ -6,7 +6,8 @@
     margin: 0;
     
     &__divider {
-        border-top: 2px solid black;
+        padding-top: 5rem;
+        border-bottom: 2px solid black;
         flex-basis: 100%;
     }
     &__foot {

@@ -8,24 +8,45 @@
     }
 
     &__image {
-        width: 43%;
+        width: 40%;
 
         &--adjusted {
             height: 75%;
             position: relative;
             right: 3rem;
+            z-index: 1;
+        }
+
+        &--rBackground {
+            position: absolute;
+            background-color: #ff4f75;
+            width: 50%;
+            height: 30%;
+            right: 0;
+            // top: 30rem;
+            bottom: 10rem;
+        }
+
+        &--dBackground {
+            position: absolute;
+            background-color: #148270;
+            width: 50%;
+            height: 48%;
+            right: 0;
+            bottom: 1rem;
         }
     }
         .rushHour {
-            box-shadow: 2rem 3rem #ff4f75;
+            // box-shadow: 2rem 3rem #ff4f75;
+            width: 50%;
             position: relative;
-            top: 16rem;
+            top: 45rem;
         }
         .drunkenPhoto {
-            box-shadow: 2rem 5rem #148270;
-            width: 50%;
+            // box-shadow: 2rem 5rem #148270;
+            width: 53%;
             position: relative; 
-            bottom: 12rem;
+            bottom: -5rem;
         }
     
     
@@ -43,3 +64,8 @@
     }
 }
         
+.drunkenCaption {
+    position: absolute;
+    right: 10rem;
+    top: 15rem;
+}
