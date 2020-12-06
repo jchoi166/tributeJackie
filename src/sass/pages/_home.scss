@@ -1,0 +1,33 @@
+.home-content {
+    display: flex;
+    margin-top: 80vh;
+    justify-content: center;
+    background: white;
+    padding: 0 10rem;
+    width: 100%;
+    z-index: 5;
+
+    @include respond(tab-port) {
+        padding: 0 4rem;
+        margin-bottom: -1rem;
+    }
+    
+    &__wrapper {
+        padding: 3rem 0;
+        max-width: 1200px;
+        font-size: 4rem;
+    }
+
+    &__biography {
+        display: flex;
+        flex-direction: column;
+        padding-top: 3rem;
+    
+        p {
+            margin-top: 4rem;
+            max-width: 80rem;
+            align-self: flex-end;
+        }
+    }
+}
+
