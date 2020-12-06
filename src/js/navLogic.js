@@ -1,21 +1,20 @@
 console.log('its working')
 
 const nav = document.querySelector(".nav")
-const navScrolled = document.querySelector(".nav-npm scrolled")
-const sectionOne = document.querySelector(".test")
+const navScrolled = document.querySelector(".nav-scrolled")
+const pageWrapper = document.querySelector(".page-wrapper")
 
-const sectionOneOptions = {
+
+
+const pageWrapperOptions = {
     root: null,
     threshold: 0,
-    rootMargin: '0px 0px -80% 0px'
+    rootMargin: `0px 0px -87% 0px`
 }
 
-export const sectionOneObserver = new IntersectionObserver (function(entries, sectionOneObserver) {   
-    console.log(entries[0].isIntersecting) 
-    if (window.innerWidth <= 850){
-        console.log ('returned')
-        return
-    } 
+console.log(pageWrapperOptions)
+const pageWrapperObserver = new IntersectionObserver (function(entries, pageWrapperObserver) {   
+
     if (entries[0].isIntersecting) {
         navScrolled.style.transform = "translateY(0%)"
         nav.style.opacity = 0
@@ -27,6 +26,7 @@ export const sectionOneObserver = new IntersectionObserver (function(entries, se
 
     }
 
-}, sectionOneOptions);
+}, pageWrapperOptions);
 
-sectionOneObserver.observe(sectionOne)
+pageWrapperObserver.observe(pageWrapper)
+

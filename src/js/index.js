@@ -1,5 +1,5 @@
 import "../sass/main.scss"
-// import "./navLogic"
+import "./navLogic"
 import "./parallax"
 
 

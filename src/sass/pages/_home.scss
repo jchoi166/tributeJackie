@@ -5,6 +5,12 @@
     background: white;
     padding: 0 10rem;
     width: 100%;
+    z-index: 5;
+
+    @include respond(tab-port) {
+        padding: 0 4rem;
+        margin-bottom: -1rem;
+    }
     
     &__wrapper {
         padding: 3rem 0;

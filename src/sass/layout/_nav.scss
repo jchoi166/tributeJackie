@@ -10,6 +10,10 @@
     transition: opacity .3s; 
     opacity: 1;
 
+    @include respond(tab-port) {
+        opacity: 0;
+    }
+
     &__logo {
         line-height: 40px;
         padding-left: 20px;
@@ -32,7 +36,12 @@
     opacity: 0;
     transform: translateY(-100%);
     transition: transform .5s, opacity .2s ease-in;
-    
+
+    @include respond(tab-port) {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
     &__logo {
         @extend .nav__logo;
         font-size: 30px;

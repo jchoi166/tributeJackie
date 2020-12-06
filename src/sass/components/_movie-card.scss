@@ -5,16 +5,31 @@
     &__imageContainer {
         display:flex;
         justify-content: space-between;
+
+        @include respond (tab-port) {
+            display: block;
+        }
     }
 
     &__image {
         width: 40%;
+
+        // @include respond (tab-port) {
+        //     width: 100%;
+        // }
+        img {
+            width: 100%;
+        }
 
         &--adjusted {
             height: 75%;
             position: relative;
             right: 3rem;
             z-index: 1;
+
+            // @include respond (tab-port) {
+            //     position: static
+            // }
         }
 
         &--rBackground {
@@ -25,6 +40,10 @@
             right: 0;
             // top: 30rem;
             bottom: 10rem;
+
+            @include respond (tab-port) {
+                display: none;
+            }
         }
 
         &--dBackground {
@@ -33,7 +52,17 @@
             width: 50%;
             height: 48%;
             right: 0;
-            bottom: 1rem;
+            bottom: 5rem;
+
+            @include respond (tab-land) {
+                bottom: 25rem;
+                right: -2rem;
+                height: 30%;
+            }
+
+            @include respond (tab-port) {
+                display: none;
+            }
         }
     }
         .rushHour {
@@ -41,12 +70,29 @@
             width: 50%;
             position: relative;
             top: 45rem;
+
+            @include respond (tab-port) {
+                width: 100%;
+                right: 0;
+                top: 22rem;
+            }
         }
         .drunkenPhoto {
             // box-shadow: 2rem 5rem #148270;
             width: 53%;
             position: relative; 
             bottom: -5rem;
+
+            @include respond (tab-land) {
+                right: 0rem;
+                bottom: -10rem;
+            }
+
+            @include respond (tab-port) {
+                width: 100%;
+                right: 0;
+                bottom: -43rem;
+            }
         }
     
     
@@ -61,6 +107,15 @@
             line-height: 4rem;
             max-width: 45rem;
         }
+
+        @include respond (tab-port) {
+            padding-top: 6rem;
+        }
+
+        @include respond (phone) {
+            padding-top: 9rem;
+        }
+        
     }
 }
         
@@ -68,4 +123,14 @@
     position: absolute;
     right: 10rem;
     top: 15rem;
+
+    @include respond (tab-land) {
+        position: static; 
+    }
+
 }
+// .drunkenCaption {
+//     position: absolute;
+//     right: 10rem;
+//     top: 15rem;
+// }

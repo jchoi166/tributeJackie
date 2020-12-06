@@ -6,24 +6,28 @@
     top: -7rem;
     position: fixed;
     // padding: 3rem;
-    z-index: -2;
+    z-index: -3;
+
+    @include respond(tab-land) {
+        background-image: url(/src/images/jackiePray.jpg);
+        background-size: cover;
+    }
 
     &__message {
-        padding-left: 2rem;
-        position: relative;
+        padding-left: 5rem;
+        position: fixed;
         color: white;
-        top: 35%;
+        top: 30%;
         max-width: 50rem;
         font-size: 2rem;
         font-family: Arial, Helvetica, sans-serif;
         line-height: 5rem;
-
+        z-index: -1;
+        
         p {
             font-size: 1.4rem;
+            color: white;
         }
     }
 }
 
-.scroll {
-    
-}

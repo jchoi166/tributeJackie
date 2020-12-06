@@ -1,69 +1,14 @@
-@media screen and (max-width: 750px){
-    body .test .movieList .inner .movie .imageContainer {
-         display: flex;
-         flex-direction: column;
- 
-         .pictures {
-             width: 100%;
-             margin-top: 2rem;
-         }
-         .rushHour {
-             box-shadow: none;
-             position: static;
-         }
-         .drunkenPhoto {
-             box-shadow: none;
-             // width: 50%;
-             position: static; 
-             bottom: 12rem;
-         }
-        
-     }
- 
-     body .test .footer {
-         display: block;
- 
-         .foot{
-             text-align: center;
-             padding: 0; 
-         }
-         .watermark{
-             position: static;
-             text-align: center;
-             padding: 4rem;
-         }
-     }
- }
- 
- @media screen and (max-width: 850px){
-     html{
-         font-size: 7px;
-     }
-     body .nav {
-         opacity: 0;
- 
-         &--scrolled{
-             opacity: 1;
-             transform: translateY(0%);
-         }
-     }
- }
- 
- @media screen and (min-width: 1200px){
-     .biography {
-         align-items: flex-end;
- 
-         p {
-             text-align: right;
-         }
-     }
-     .drunkenCaption {
-         position: absolute;
-         right: 0;
-         bottom: 4rem;
-     }
-     body .test .footer {
-         padding-top: 4rem;
-     }
- 
- }
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content };   // 600px  600/12 = 37.5
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content };   // 900px
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content };     // 1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content };    // 1800px
+    }
+};
