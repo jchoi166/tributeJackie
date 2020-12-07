@@ -65,11 +65,13 @@ module.exports = (env, options) => ({
     new HtmlWebpackPlugin({
         template: "src/index.html"
     }),
-    new CleanWebpackPlugin(["dist"]),
+    new CleanWebpackPlugin(["./"]),
   ],
 
   output: {
-    filename: "[name].[contenthash].js",
-    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    path: path.resolve(__dirname),
+    //path.resolve(__dirname, "dist")
+    //[name].[contenthash].js
   }
 });
