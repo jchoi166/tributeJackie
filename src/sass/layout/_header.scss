@@ -9,7 +9,7 @@
     z-index: -3;
 
     @include respond(tab-land) {
-        background-image: url(../../images/jackiePray.jpg);
+        background-image: url(/images/jackiePray.jpg);
         background-size: cover;
     }
 
