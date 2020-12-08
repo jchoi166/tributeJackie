@@ -35,6 +35,7 @@ module.exports = (env, options) => ({
             options: {
               name: "[name].[ext]",
               outputPath: "images",
+              publicPath: "/images/"
             }
           }
         ]
@@ -65,7 +66,7 @@ module.exports = (env, options) => ({
     new HtmlWebpackPlugin({
         template: "src/index.html"
     }),
-    new CleanWebpackPlugin(["./"]),
+    new CleanWebpackPlugin(["/" , "css"]),
   ],
 
   output: {
