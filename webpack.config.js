@@ -35,7 +35,7 @@ module.exports = (env, options) => ({
             options: {
               name: "[name].[ext]",
               outputPath: "images",
-              publicPath: "/images/"
+              // publicPath: "/images/"
             }
           }
         ]
