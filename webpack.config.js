@@ -66,7 +66,7 @@ module.exports = (env, options) => ({
     new HtmlWebpackPlugin({
         template: "src/index.html"
     }),
-    new CleanWebpackPlugin(["/"]),
+    new CleanWebpackPlugin([".", "images"]),
   ],
 
   output: {
