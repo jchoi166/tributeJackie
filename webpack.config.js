@@ -61,12 +61,12 @@ module.exports = (env, options) => ({
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/[name].[contenthash].css"
+      filename: "styles.css"
     }),
     new HtmlWebpackPlugin({
         template: "src/index.html"
     }),
-    new CleanWebpackPlugin(["/" , "css"]),
+    new CleanWebpackPlugin(["/"]),
   ],
 
   output: {
