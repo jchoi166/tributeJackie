@@ -23,4 +23,27 @@
     &:hover::after {
         top: 100%;
     }
+
+    &--subscribed {
+        display: flex;
+        align-items: center;
+        border: 2px solid white;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 0 2rem;
+        cursor: pointer;
+
+        span {
+            font-size: 2rem;
+            margin-left: 1rem;
+            transition: all .3s;
+
+        }
+
+        &:hover span {
+            transform: translateX(.7rem);
+            // background-color: red;
+        }
+
+    }
 }

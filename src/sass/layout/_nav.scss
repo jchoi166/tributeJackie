@@ -21,12 +21,60 @@
         font-size: 40px;
         width: 100px;
     }
-    &__hamburger {
-        transform: translateY(-13px);
-        padding-right: 20px;
-    }
 
+    &__icon-wrapper {
+        height: 4rem;
+        width: 4rem;
+        transform: translateY(-13px);
+        margin-right: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        direction: rtl;
+
+        &:hover .nav__icon {
+            width: 3rem; 
+        }
+    }
+    
+    &__icon {
+        position: relative;
+        height: 2px;
+        width: 2rem;
+        background-color: white;
+        transition: width .2s;
+
+        &::before,
+        &::after {
+            height: 2px;
+            width: 3rem;
+            background-color: white;
+            content: "";
+            position: absolute;
+            right: 0;
+            transition: all .2s;
+
+        }
+
+        &::before {top: -.8rem;}
+        &::after {top: .8rem;}
+
+        &--active {
+            background-color: transparent;
+
+            &::before {
+                transform: rotate(45deg);
+                top: 0;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                top: 0;
+            }
+        }
+    }
 }
+
 .nav-scrolled {
     @extend .nav;
     background-color: white;
@@ -47,9 +95,100 @@
         font-size: 30px;
         width: 400px;
     }
-    &__hamburger{
-        @extend .nav__hamburger;
+    &__icon-wrapper {
+        @extend .nav__icon-wrapper;
         transform: translateY(0px);
-        padding-right: 20px;
+
+    }
+    &__icon {
+        @extend .nav__icon;
+        background-color: black;
+
+        &::before,
+        &::after {
+            background-color: black;
+        }
     }
 }
+
+.nav-clicked {
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    // margin: 2rem;
+    position: fixed;
+    border: 2rem solid rgb(255, 255, 255);
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity .4s;
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    &__menu {
+        text-align: center;
+        padding-bottom: 7rem;
+
+        h1 {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        position: absolute;
+        bottom: 6rem;
+        width: 90%;
+        margin: auto;
+
+        input {
+            flex: 1;
+            margin: 0 1.5rem 0 4rem;
+            background: transparent;
+            border: 2px solid white;
+            border-right: none;
+            border-left: none;
+            font-size: 1.7rem;
+            color: white; 
+            letter-spacing: 1px;
+
+            &:focus {
+                outline: none; 
+            }
+
+            &::placeholder {
+                font-weight: bold; 
+                color: rgb(172, 172, 172);
+            }
+    
+        }
+    }
+
+    &__social {
+        position: absolute;
+        right: -7rem;
+        transform: rotate(-90deg);
+        font-size: 1.8rem;
+        
+        span {
+            cursor: pointer; 
+            transition: color .3s;
+
+            &:hover {
+                color: #fd6b6a;
+            }
+        }
+
+        span:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}
+
+

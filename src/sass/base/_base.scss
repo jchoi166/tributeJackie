@@ -9,6 +9,7 @@ html {
     height: 100%;
     width: 100%;
     // position: absolute;
+    
     @include respond (tab-land) {
         font-size: 56.25%;
     }
@@ -23,11 +24,21 @@ body {
     width: 100%;
     position: absolute;
     scroll-behavior: smooth;
-    // overflow-x: hidden;
+    overflow: visible;
+
+    // Hiding scrollbar for all browsers
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+    &::-webkit-scrollbar { /* WebKit */
+        width: 0;
+        height: 0;
+    }
 }
 
 .page-wrapper {
-    z-index: 10;
+    z-index: 1;
 
 }
 
