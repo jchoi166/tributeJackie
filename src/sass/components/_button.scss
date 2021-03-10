@@ -45,5 +45,11 @@
             // background-color: red;
         }
 
+        @include respond(phone) {
+            justify-content: center;
+            margin: 1rem auto;
+            padding: 1.3rem 1.8rem;
+        }
+
     }
 }
