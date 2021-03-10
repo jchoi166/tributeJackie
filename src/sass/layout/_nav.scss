@@ -44,8 +44,8 @@
             width: 3rem; 
         }
 
-        @include respond(phone) {
-            transform: translateY(0);
+        @include respond(tab-land) {
+            transform: translateY(0px);
         }
     }
     
