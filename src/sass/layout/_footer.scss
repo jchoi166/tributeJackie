@@ -46,4 +46,10 @@
         text-align: right;
         min-width: 277px;
     }
+    &__watermark 
+    a,
+    a:active, 
+    a:visited {
+        color: black;
+    }
 }
